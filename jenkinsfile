@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('GIT CHECKOUT') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('INSTALL') {
+            steps {
+                sh 'npm install'
+            }
+        }
+
+        stage('TEST') {
+            steps {
+                sh 'npm test'
+            }
+        }
+
+        stage('RUN SERVER') {
+            steps {
+                sh 'node server.js &'
+            }
+        }
+
+    }
+}

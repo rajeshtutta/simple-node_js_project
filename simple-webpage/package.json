@@ -1,0 +1,10 @@
+{
+  "name": "simple-webpage",
+  "version": "1.0.0",
+  "description": "Simple webpage project for Jenkins",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo Testing project"
+  }
+}
